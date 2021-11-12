@@ -1,0 +1,27 @@
+.footer {
+ box-shadow: 0 0 2em $color-grey;
+ padding: 1rem 1rem;
+
+    &__container{
+    background: $color-white;
+    display:flex;
+    justify-content: space-between;
+
+    }
+    &__info {
+    display:flex;
+    flex-direction: column;
+    }
+    &__text {
+    color: $color-grey;
+    line-height: 1.5rem;
+    }
+    &__social-media{
+    display:flex;
+    align-items: center;
+    }
+    & a {
+    margin: 0.5rem;
+    }
+}
+

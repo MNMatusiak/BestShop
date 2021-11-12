@@ -1,7 +1,116 @@
 .benefits{
-background-color: $color-grey;
-    &__container {
+    background-color: $color-light-grey;
+    padding: 1rem 0;
 
+    &__container {
+    margin-top: 4rem;
+    }
+
+    &__single {
+    display: flex;
+    flex-direction:row;
+      &:nth-child(2){
+      flex-direction: row-reverse;
+        }
+    @include tablet {
+       align-items: center;
+       flex-direction: column;
+         }
+    background-color: $color-white;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    align-items: center;
+    & > * {
+    flex-basis: 100%;
+    }
+    }
+
+    &__double {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+        .benefits__single {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+    }
+
+     .benefits__row3 .benefits__single:nth-child(1) {
+            }
+    .benefits__row3 .benefits__single:nth-child(2) {
+        margin-right: 3rem;
+        }
+
+
+     &__title {
+        margin-bottom: 2rem;
+           }
+     &__text{
+        position: relative;
+        @include tablet {
+        padding-bottom: 2rem;
+        }
+        &::after{
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 325px;
+        background: black;
+        bottom: -3rem;
+        @include tablet {
+            display: none;
+            }
+         }
+        }
+
+    &__row1 .benefits__text::after{
+        background: $color-redish;
+    }
+    &__row2 .benefits__text::after{
+         background: $color-primary;
+        }
+    &__single--solo .benefits__text::after{
+         background: $color-green;
+        }
+
+    &__image {
+    display:flex;
+    justify-content: center;
+    margin-right: 117px;
+    margin-bottom: 38px;
+    position: relative;
+
+   img{
+   width: 386px;
+   height: auto;
+    @include tablet {
+    width: 192px;
 
     }
+    }
+    }
+
+    .benefits__image__background--laptop {
+    background: $color-redish;
+    height: 50%;
+    width: 50%;
+    position:absolute;
+    }
+
+    .benefits_{
+    display: flex;
+    background: $color-green;
+    flex-grow: 1;
+    align-items:center;
+
+    }
+
+
 }
+

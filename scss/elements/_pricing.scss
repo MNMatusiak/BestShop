@@ -1,0 +1,104 @@
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    &__boxes {
+    display:flex;
+//     align-items:center;
+//     justify-content: space-between;
+    margin-top: 50px;
+     @include tablet {
+            flex-direction: column;
+                        }
+
+    }
+
+    &__details,
+    &__items {
+    display:flex;
+    flex-direction: column;
+//     justify-content: center;
+    align-items: center;
+    }
+
+    &__details {
+    margin: 30px 0;
+    }
+
+    &__type {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    }
+
+    &__price {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    }
+
+    &__box--basic .pricing__price {
+    color: $color-redish;
+    }
+
+    &__box--professional .pricing__price {
+    color: $color-primary;
+    }
+
+    &__box--premium .pricing__price {
+    color: $color-green;
+    }
+
+    &__item{
+    margin-bottom: 1rem;
+    }
+
+    &__box {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 15px;
+    position: relative;
+      @include tablet {
+        flex-direction: row;
+        margin-bottom: 30px;
+                }
+    &--basic {
+      border-color: $color-redish;
+      margin-right: 30px;
+    }
+    &--professional {
+          border-color: $color-primary;
+        }
+    &--premium {
+          border-color: $color-green;
+          margin-left: 30px;
+           @include tablet {
+               margin:0px
+                }
+        }
+
+    }
+
+}
+
+.pricing__item:nth-child(1),
+.pricing__item:nth-child(2),
+.pricing__item:nth-child(3),
+.pricing__item:nth-child(4),
+.pricing__item:nth-child(5),
+{
+    background: url(../assets/checkmark-pricing-green.svg) no-repeat;
+    padding-left: 20px;
+}
+
+.pricing__box--basic .pricing__item:nth-child(4),
+.pricing__box--basic .pricing__item:nth-child(5),
+.pricing__box--professional .pricing__item:nth-child(5)
+{
+    background: url(../assets/checkmark-pricing-red.svg) no-repeat;
+}

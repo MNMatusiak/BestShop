@@ -13,6 +13,7 @@
 
     &__redish {
         background-color: $color-redish;
+
     }
 
      &__green {
@@ -22,3 +23,12 @@
              padding: 22px 155px;
          }
     }
+
+.pricing .btn {
+    position: relative;
+    transform: translate( 0%,50%);
+    @include tablet {
+//     left: -25%;
+//     transform: translate( 0%, 180%);
+    }
+}

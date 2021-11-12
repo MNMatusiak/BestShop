@@ -1,0 +1,17 @@
+.contact {
+    margin: 5rem 0;
+    background: yellow;
+    display: flex;
+
+    &__column{
+    display:flex;
+    flex-direction: column;
+    flex-basis:50%;
+    align-items: center;
+    justify-content: center;
+    }
+    &__instruction {
+    margin: 1rem 0;
+    }
+}
+
