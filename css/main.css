@@ -628,10 +628,9 @@ h2 {
 
 .benefits {
   background-color: #F7F7F7;
-  padding: 1rem 0;
-}
-.benefits__container {
-  margin-top: 4rem;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 .benefits__single {
   display: flex;
@@ -652,22 +651,6 @@ h2 {
     flex-direction: column;
   }
 }
-.benefits__single > * {
-  flex-basis: 100%;
-}
-.benefits__double {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.benefits__double .benefits__single {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .benefits .benefits__row3 .benefits__single:nth-child(2) {
   margin-right: 3rem;
 }
@@ -676,6 +659,7 @@ h2 {
 }
 .benefits__text {
   position: relative;
+  padding: 3rem;
 }
 @media (max-width: 1024px) {
   .benefits__text {
@@ -684,7 +668,8 @@ h2 {
 }
 .benefits__text::after {
   content: "";
-  position: absolute;
+  position: relative;
+  display: block;
   height: 4px;
   width: 325px;
   background: black;
@@ -720,17 +705,60 @@ h2 {
     width: 192px;
   }
 }
+.benefits__double {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .benefits__double {
+    flex-direction: column;
+  }
+}
+.benefits__single--solo {
+  display: flex;
+  align-items: center;
+  max-width: 620px;
+  background-color: white;
+}
+@media (max-width: 1024px) {
+  .benefits__single--solo {
+    margin-top: 0;
+  }
+}
+.benefits__single--image {
+  display: flex;
+  background: #55DFB4;
+  flex-grow: 1;
+  margin-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+@media (max-width: 1024px) {
+  .benefits__single--image {
+    margin-left: 0;
+  }
+}
+.benefits__single--image .img {
+  width: 295px;
+  height: auto;
+  margin-top: 55px;
+}
+.benefits__single--image, .benefits__single--solo {
+  border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .benefits__single--image, .benefits__single--solo {
+    width: 100%;
+    max-width: none;
+  }
+}
 .benefits .benefits__image__background--laptop {
   background: #FB3B64;
   height: 50%;
   width: 50%;
   position: absolute;
-}
-.benefits .benefits_ {
-  display: flex;
-  background: #55DFB4;
-  flex-grow: 1;
-  align-items: center;
 }
 
 .pricing {
@@ -852,18 +880,118 @@ h2 {
 }
 
 .contact {
-  margin: 5rem 0;
-  background: yellow;
+  margin: 5rem auto;
   display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1024px) {
+  .contact {
+    flex-direction: column;
+  }
 }
 .contact__column {
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+}
+.contact__column:nth-child(1) {
+  padding-left: 12%;
+}
+@media (max-width: 1024px) {
+  .contact__column:nth-child(1) {
+    padding-left: 0px;
+    padding-bottom: 25px;
+  }
 }
 .contact__instruction {
   margin: 1rem 0;
+}
+.contact__details {
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .contact__details {
+    flex-direction: column;
+  }
+}
+.contact a {
+  text-decoration: none;
+  color: #A5A5A5;
+}
+.contact a:nth-child(1) {
+  padding-right: 15px;
+}
+@media (max-width: 1024px) {
+  .contact a {
+    padding: 5px 0;
+  }
+}
+.contact .form-item:nth-child(1),
+.contact .form-item:nth-child(2) {
+  text-transform: uppercase;
+  color: #08A6E4;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 2px;
+}
+.contact .form-input {
+  border: 0;
+  border-bottom: 1px solid #A5A5A5;
+  width: 100%;
+  height: 3rem;
+}
+.contact .form__consent {
+  margin-top: 30px;
+  display: flex;
+}
+.contact .form__checkbox {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.375rem;
+}
+.contact .form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.contact .checkbox__text {
+  color: #A5A5A5;
+}
+.contact .form__checkbox .checkbox {
+  position: absolute;
+  border: 1px solid #A5A5A5;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+}
+.contact .form__checkbox input:checked ~ .checkbox {
+  background-image: url(../assets/Checkmark.svg);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.contact .btn {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+::-moz-placeholder {
+  color: transparent;
+}
+
+:-ms-input-placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: transparent;
 }
 /*# sourceMappingURL=main.css.map */

@@ -114,8 +114,7 @@
             </div>
 
             <div class="benefits__double">
-
-                <div class="benefits__single benefits__single--solo">
+                <div class="benefits__single--solo">
                     <div class="benefits__text">
                         <h2 class="benefits__title">Increase recognition <br> your brand!</h2>
                         <p class="benefits__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -125,9 +124,10 @@
                     </div>
                 </div>
 
-                <div class="benefits__single benefits__single--image">
-                    <img src="assets/Trumpet.png" alt="trumpet" class="trumpet">
+                <div class="benefits__single--image">
+                    <img src="assets/Trumpet.png" alt="trumpet" class="img trumpet">
                 </div>
+            </div>
 
             </div>
 
@@ -201,22 +201,25 @@
         </div>
         <div class="contact__column">
             <form action="#" class="form">
-                <div class="form-item">
+                <div class="form-item"> Name
                     <input type="text" class="form-input" placeholder="name" aria-label="name">
                 </div>
-                <div class="form-item">
+                <div class="form-item"> e-mail
                     <input type="email" class="form-input" placeholder="email" aria-label="name">
                 </div>
-                <label class="form-item checkbox">
-                    <input type="checkbox" class="checkbox-input">
-                    <div class="checkbox-text">
-                        I hereby give consent for my personal data included in my application to be processed
-                        for the purposes of the recruitment process under the European Parliament’s and Council
-                        of the European Union Regulation on the Protection of Natural Persons as of 27 April
-                        2016, with regard to the processing of personal data and on the free movement of such
-                        data, and repealing Directive 95/46/EC (Data Protection Directive)
-                    </div>
-                </label>
+                <div class="form__consent">
+                    <label class="form__checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox"></span>
+                        <p class="checkbox__text">
+                            I hereby give consent for my personal data included in my application to be processed
+                            for the purposes of the recruitment process under the European Parliament’s and Council
+                            of the European Union Regulation on the Protection of Natural Persons as of 27 April
+                            2016, with regard to the processing of personal data and on the free movement of such
+                            data, and repealing Directive 95/46/EC (Data Protection Directive)
+                        </p>
+                    </label>
+                </div>
             </form>
             <button class="btn btn__primary">Send</button>
         </div>

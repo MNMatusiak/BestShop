@@ -1,64 +1,48 @@
 .benefits{
     background-color: $color-light-grey;
-    padding: 1rem 0;
-
-    &__container {
-    margin-top: 4rem;
-    }
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
 
     &__single {
     display: flex;
     flex-direction:row;
-      &:nth-child(2){
+        &:nth-child(2){
       flex-direction: row-reverse;
         }
-    @include tablet {
-       align-items: center;
-       flex-direction: column;
-         }
     background-color: $color-white;
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 2rem;
     border-radius: 5px;
     align-items: center;
-    & > * {
-    flex-basis: 100%;
+//     & > * {
+//     flex-basis: 100%;
+//     }
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+      }
     }
-    }
-
-    &__double {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-        .benefits__single {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        }
-    }
-
-     .benefits__row3 .benefits__single:nth-child(1) {
-            }
+    .benefits__row3 .benefits__single:nth-child(1) {
+     }
     .benefits__row3 .benefits__single:nth-child(2) {
         margin-right: 3rem;
         }
-
 
      &__title {
         margin-bottom: 2rem;
            }
      &__text{
         position: relative;
+        padding: 3rem;
         @include tablet {
         padding-bottom: 2rem;
         }
         &::after{
         content: "";
-        position: absolute;
+        position: relative;
+        display:block;
         height: 4px;
         width: 325px;
         background: black;
@@ -91,8 +75,57 @@
    height: auto;
     @include tablet {
     width: 192px;
-
     }
+    }
+    }
+
+    &__double{
+    display: flex;
+    max-width: 1000px;
+    margin:0 auto;
+
+    @include tablet {
+    flex-direction: column;
+   }
+    }
+
+    &__single--solo{
+    display: flex;
+    align-items: center;
+    max-width: 620px;
+    background-color: white;
+    @include tablet {
+    margin-top: 0;
+    }
+    }
+
+    &__single--image{
+    display: flex;
+    background: $color-green;
+    flex-grow: 1;
+    margin-left: 2rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+    @include tablet {
+    margin-left: 0;
+    }
+    }
+
+    &__single--image .img{
+    width: 295px;
+    height: auto;
+    margin-top: 55px;
+    }
+
+    &__single--image,
+    &__single--solo
+    {
+    border-radius: 5px;
+    @include tablet {
+    width: 100%;
+    max-width: none;
     }
     }
 
@@ -102,15 +135,7 @@
     width: 50%;
     position:absolute;
     }
-
-    .benefits_{
-    display: flex;
-    background: $color-green;
-    flex-grow: 1;
-    align-items:center;
-
-    }
-
-
 }
+
+
 
