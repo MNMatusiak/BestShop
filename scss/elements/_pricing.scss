@@ -10,21 +10,30 @@
 //     justify-content: space-between;
     margin-top: 50px;
      @include tablet {
-            flex-direction: column;
+      flex-direction: column;
                         }
-
     }
 
     &__details,
     &__items {
     display:flex;
     flex-direction: column;
-//     justify-content: center;
     align-items: center;
+    }
+
+    &__items {
+    @include tablet {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    }
     }
 
     &__details {
     margin: 30px 0;
+    @include tablet {
+    width: 100%;
+    }
     }
 
     &__type {
@@ -66,7 +75,11 @@
       @include tablet {
         flex-direction: row;
         margin-bottom: 30px;
-                }
+        padding: 2.5rem 0;
+     &:nth-child(2){
+        padding: 4rem 0;
+     }
+     }
     &--basic {
       border-color: $color-redish;
       margin-right: 30px;
